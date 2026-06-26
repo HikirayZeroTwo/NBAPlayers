@@ -29,7 +29,6 @@
     overflow-x: hidden;
   }
 
-  /* ── NAV ─────────────────────────────────── */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; align-items: center; justify-content: space-between;
@@ -53,7 +52,6 @@
   }
   .nav-links a:hover { color: var(--white); }
 
-  /* ── HERO ─────────────────────────────────── */
   #hero {
     min-height: 100vh;
     display: flex; align-items: center; justify-content: center;
@@ -61,7 +59,6 @@
     padding: 80px 6vw 60px;
   }
 
-  /* Court lines background */
   .court-bg {
     position: absolute; inset: 0;
     background:
@@ -75,7 +72,6 @@
       repeating-linear-gradient(90deg, var(--amber) 0 1px, transparent 1px 120px),
       repeating-linear-gradient(0deg,  var(--amber) 0 1px, transparent 1px 120px);
   }
-  /* Center circle */
   .court-circle {
     position: absolute;
     width: 380px; height: 380px;
@@ -85,7 +81,6 @@
     transform: translate(-50%, -50%);
   }
 
-  /* Animated basketball */
   .ball-wrap {
     position: absolute;
     right: 10vw; top: 50%;
@@ -184,7 +179,6 @@
     font-size: .72rem; color: var(--muted); letter-spacing: .1em; text-transform: uppercase;
   }
 
-  /* ── ABOUT ─────────────────────────────────── */
   section { padding: 90px 6vw; }
 
   .section-eyebrow {
@@ -236,7 +230,6 @@
     font-size: .82rem; color: var(--muted); line-height: 1.6;
   }
 
-  /* ── APPS ─────────────────────────────────── */
   #apps { background: var(--court); }
 
   .apps-grid {
@@ -309,7 +302,6 @@
   .download-btn:hover { background: var(--amber2); transform: translateY(-2px); }
   .download-btn svg { width: 18px; height: 18px; fill: var(--deep); }
 
-  /* ── STACK ─────────────────────────────────── */
   #stack {
     background: var(--deep);
     border-top: 1px solid var(--line);
@@ -333,7 +325,6 @@
   .stack-card h4 { font-size: .9rem; font-weight: 600; margin-bottom: .35rem; }
   .stack-card p { font-size: .75rem; color: var(--muted); line-height: 1.5; }
 
-  /* ── FOOTER ─────────────────────────────────── */
   footer {
     background: var(--deep);
     border-top: 1px solid var(--line);
@@ -349,7 +340,6 @@
     font-size: .8rem; color: var(--muted);
   }
 
-  /* ── SCROLL REVEAL ─────────────────────────── */
   .reveal {
     opacity: 0; transform: translateY(32px);
     transition: opacity .65s ease, transform .65s ease;
@@ -358,7 +348,6 @@
     opacity: 1; transform: none;
   }
 
-  /* ── RESPONSIVE ────────────────────────────── */
   @media (max-width: 800px) {
     .ball-wrap { display: none; }
     .about-grid, .apps-grid { grid-template-columns: 1fr; }
@@ -373,7 +362,6 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <span class="nav-logo">🏀 NBA Players</span>
   <ul class="nav-links">
@@ -382,8 +370,6 @@
     <li><a href="#stack">Технологии</a></li>
   </ul>
 </nav>
-
-<!-- HERO -->
 <section id="hero">
   <div class="court-bg"></div>
   <div class="court-lines"></div>
@@ -416,13 +402,11 @@
     </div>
   </div>
 
-  <!-- Animated basketball -->
   <div class="ball-wrap">
     <div class="ball"></div>
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
   <div class="section-eyebrow">О проекте</div>
   <h2 class="section-title reveal">Что это такое?</h2>
@@ -491,14 +475,12 @@
   </div>
 </section>
 
-<!-- APPS -->
 <section id="apps">
   <div class="section-eyebrow">Скачать</div>
   <h2 class="section-title reveal">Выбери платформу</h2>
   <p class="section-body reveal">Оба приложения бесплатны. Выбери нужное и скачай.</p>
 
   <div class="apps-grid">
-    <!-- Desktop -->
     <div class="app-card reveal">
       <div class="app-badge">🖥 Десктоп</div>
       <h3 class="app-name">NBA Players Desktop</h3>
@@ -518,7 +500,6 @@
       </a>
     </div>
 
-    <!-- Mobile -->
     <div class="app-card reveal">
       <div class="app-badge">📱 Android</div>
       <h3 class="app-name">NBA Players Mobile</h3>
@@ -540,7 +521,6 @@
   </div>
 </section>
 
-<!-- STACK -->
 <section id="stack">
   <div class="section-eyebrow">Технологии</div>
   <h2 class="section-title reveal">Чем это сделано</h2>
@@ -588,16 +568,14 @@
     </div>
   </div>
 </section>
-
-<!-- FOOTER -->
+ 
 <footer>
   <span class="logo">🏀 NBA Players</span>
-  <p>Авторский дипломный проект · 2025</p>
+  <p>Проект Егор Лесик · 2026</p>
   <p style="color:var(--muted);font-size:.75rem;">Все данные хранятся локально на устройстве пользователя</p>
 </footer>
 
 <script>
-  // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => {
